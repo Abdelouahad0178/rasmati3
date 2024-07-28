@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Drawing App</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="controls">
+            <button onclick="setShape('rectangle')">Rectangle</button>
+            <button onclick="setShape('square')">Square</button>
+            <button onclick="setShape('triangle')">Triangle</button>
+            <button onclick="setShape('circle')">Circle</button>
+            <button onclick="setShape('semiCircle')">Semi-Circle</button>
+            <button onclick="setShape('line')">Line</button>
+            <button onclick="setShape('erase')">Eraser</button>
+            <button onclick="setShape('measure')">Measure</button>
+            <input type="number" id="measurementInput" placeholder="Measurement (m)">
+            <select id="directionInput">
+                <option value="horizontal-right">Horizontal Right</option>
+                <option value="horizontal-left">Horizontal Left</option>
+                <option value="vertical-up">Vertical Up</option>
+                <option value="vertical-down">Vertical Down</option>
+            </select>
+            <input type="range" id="eraserSize" min="5" max="50" value="10" oninput="updateEraserSize(this.value)">
+            <button onclick="clearCanvas()">Clear</button>
+            <button onclick="saveDrawing()">Save Drawing</button>
+            <button onclick="undo()">Undo</button>
+            <button onclick="redo()">Redo</button>
+        </div>
+        <div id="canvasContainer">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

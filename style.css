@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+#controls button, #controls input[type=range], #controls input[type=number], #controls select {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#controls button:hover, #controls input[type=range]:hover, #controls input[type=number]:hover, #controls select:hover {
+    background-color: #e0e0e0;
+}
+
+#canvasContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#canvas {
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    #controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #controls button, #controls input[type=range], #controls input[type=number], #controls select {
+        width: 90%;
+        margin: 5px 0;
+    }
+}
